@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .main{
+                width: 1000px;
+                background-color: red;
+                color: white;
+                padding: 20px;
+                font-size: 30px;
+            }
+        </style>   
+    </head>
+
+    <body>
+        {% for each_course in course_list %}
+            <div>{{forloop.counter}} {{each_course}}</div>
+        {% endfor %}
+
+        <br/>
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+            </tr>
+            {% for each_student in student_details %}
+                <tr>
+                    <td>{{each_student.name}}</td>
+                <   td>{{each_student.phone}}</td>
+                </tr>
+            {% endfor %}
+        <table>
+
+
+    </body>
+<html>
+
